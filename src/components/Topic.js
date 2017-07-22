@@ -117,7 +117,7 @@ class Topic extends React.Component{
 													<span>
 														{ !this.props.user.isLogin ?
 															<Icon type="like-o" onClick={this.handleLike.bind(this, item.id)}/> :
-															item.ups.indexOf(this.props.user.user.id)>0 ?
+															item.ups.indexOf(this.props.user.user.id)>=0 ?
 															<Icon type="like" onClick={this.handleLike.bind(this, item.id)}/> :
 															<Icon type="like-o" onClick={this.handleLike.bind(this, item.id)} />
 														}{item.ups.length}&nbsp;&nbsp;
